@@ -105,7 +105,7 @@ function draw() {
     
     if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-700) {
       jumpSound.play( )
-      trex.velocityY = -20;
+      trex.velocityY = -25;
        touches = [];
     }
     
@@ -184,7 +184,7 @@ function spawnClouds() {
 }
 
 function spawnObstacles() {
-  if(frameCount % 100 === 0) {
+  if(frameCount % 150 === 0) {
     var obstacle = createSprite(600,height-95,20,30);
     obstacle.setCollider('circle',0,0,45)
     // obstacle.debug = true
